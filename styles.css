@@ -1,4 +1,5 @@
 body {
+  background-color: #94f5f3;
   margin: 40px;
 }
 
@@ -70,7 +71,7 @@ body {
 }
 
 .text-img {
-  background-color: #2f8d46;
+  background-color: #b7f8d7;
   background-image: url(docs/assets/fijiflag.gif);
   background-repeat: repeat;
   background-clip: text;
@@ -91,14 +92,31 @@ body {
     grid-template-columns: 1fr 4fr 1fr;
     height: 100vh;
     grid-template-areas:
-        "header       hearder       header"
+        "header       header       header"
         "left-side    banner        right-side"
         "left-side    main          right-side"
         "left-side    low-content   right-side"
         "footer       footer        footer";
     grid-gap: 10px; padding: 10px;
     font-weight: 600; font-size: 20px;
-
+    padding: 20px 0;
+    text-align: center;
+  }
+  .banner {
+    grid-area: banner;
+    background-color: red;
+  }
+  .left-side {
+    grid-area: left-side;
+    background-color: green;
+  }
+  .right-side {
+    grid-area: right-side;
+    background-color: orange;
+  }
+  .low-content {
+    grid-area: low-content;
+    background-color: green;
   }
 
   @media (max-width: 678px) {
