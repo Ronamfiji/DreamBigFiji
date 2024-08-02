@@ -1,0 +1,190 @@
+body {
+  margin: 40px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.wrapper {
+  background-color: #eeeeee;
+  color: #444;
+  padding: 10px;
+  margin: auto;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+      "header" "sidebar" "content" "footer";
+}
+
+@media only screen and (min-width: 500px) {
+  .wrapper {
+      grid-template-columns: 20% auto;
+      grid-template-areas:
+          "header   header" "sidebar  content" "footer   footer";
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper {
+      grid-gap: 20px;
+      grid-template-columns: 120px auto;
+      grid-template-areas:
+          "header  header" "sidebar content" "footer  footer";
+      max-width: 600px;
+  }
+}
+
+.box {
+  background-color: #444;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.header,
+.footer {
+  background-color: blue;
+}
+
+.sidebar {
+  background-color: #ccc;
+  color: #444;
+}
+
+.content {
+  background: rgb(16, 160, 179);
+}
+
+
+
+.text-img {
+    background-color: #2f8d46;
+    background-image: url(/Users/ronamfiji/GitHub/DreamBigFiji/docs/assets/fijiflag.gif);
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 200px;
+    font-size: 120px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Steelfish Rg', 'helvetica neue', 
+                      helvetica, arial, sans-serif;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 80px auto 1fr auto 50px;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    grid-template-areas:
+        "header       hearder       header"
+        "left-side    banner        right-side"
+        "left-side    main          right-side"
+        "left-side    low-content   right-side"
+        "footer       footer        footer";
+    grid-gap: 10px; padding: 10px;
+    font-weight: 600; font-size: 20px;
+
+  }
+
+  @media (max-width: 678px) {
+    .container {
+      grid-template-rows: 50px 50px 50px 1fr
+      50px 50px 50px;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "header"
+      "banner"
+      "left-side"
+      "main"
+      "right-side"
+      "low-content"
+      "footer";
+    }
+  }
+
+
+  .main-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    width: 100%;
+    height: 100%;
+    border: 5px solid;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .one {
+    border-color: red;
+    animation: animate01 5s ease-in infinite;
+  }
+  .two {
+    border-color: green;
+    animation: animate02 5s ease-in-out infinite;
+  }
+  .three {
+    border-color:blue;
+    animation: animate03 5s ease-out infinite;
+  }
+  @keyframes animate01 {
+    0% {
+      rotate: 0deg;
+      width: 100%;
+    }
+    50% {
+      width: 40%;
+    }
+    100% {
+      rotate: 360deg;
+      width: 100%;
+    }
+  }
+  @keyframes animate02 {
+    0% {
+      rotate: 0deg;
+      width: 100%;
+    }
+    50% {
+      width: 40%;
+    }
+    100% {
+      rotate: 360deg;
+      width: 100%;
+    }
+  }
+  @keyframes animate03 {
+    0% {
+      rotate: 0deg;
+      width: 100%;
+    }
+    50% {
+      width: 40%;
+    }
+    100% {
+      rotate: 360deg;
+      width: 100%;
+    }
+  }
